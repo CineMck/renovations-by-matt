@@ -1599,6 +1599,7 @@
       <div class="footer-bottom">
         <span>&copy; 2026 Renovations by Matt. All rights reserved.</span>
         <span>Licensed &amp; Insured</span>
+        <a href="#" onclick="event.preventDefault();ADMIN.openLogin();" style="color:rgba(255,255,255,0.25);font-size:0.72rem;text-decoration:none;margin-left:auto;" title="Admin Login">Admin</a>
       </div>
     </div>
   </footer>
@@ -1797,6 +1798,12 @@
     async sha256(str) {
       const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
       return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+    },
+
+    // --- Open Login ---
+    openLogin() {
+      document.getElementById('adminLoginModal').style.display = 'flex';
+      setTimeout(() => document.getElementById('adminEmail').focus(), 100);
     },
 
     // --- Auth ---
