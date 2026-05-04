@@ -40,7 +40,7 @@
        images/tile-20.jpg  (tan diagonal with rain showerhead)
      COMMERCIAL:
        images/commercial-01.jpg  (Jet's Pizza red tile counter)
-  3. Save the file and open it in a browser -- photos will appear automatically!
+  3. Save the file and open it in a browser — photos will appear automatically!
   ============================================================
   -->
 
@@ -107,145 +107,351 @@
       transition: all 0.25s ease;
       font-family: 'Inter', sans-serif;
     }
-    .btn-primary { background: var(--gold); color: #fff; }
+    .btn-primary {
+      background: var(--gold);
+      color: #fff;
+    }
     .btn-primary:hover { background: #a96e1c; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(196,134,43,0.35); }
-    .btn-outline { background: transparent; color: var(--dark); border: 2px solid var(--dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--dark);
+      border: 2px solid var(--dark);
+    }
     .btn-outline:hover { background: var(--dark); color: #fff; }
-    .btn-outline-white { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.7); }
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.7);
+    }
     .btn-outline-white:hover { background: rgba(255,255,255,0.15); }
 
     /* ===== NAVIGATION ===== */
     nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      z-index: 1000; height: var(--nav-h);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--nav-h);
       background: rgba(255,255,255,0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-    .nav-logo { display: flex; flex-direction: column; line-height: 1; }
-    .nav-logo .brand-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--dark); }
-    .nav-logo .brand-sub { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
-    .nav-links { display: flex; align-items: center; gap: 36px; }
-    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--mid); transition: color 0.2s; }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav-logo .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .nav-logo .brand-sub {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--mid);
+      transition: color 0.2s;
+    }
     .nav-links a:hover { color: var(--gold); }
     .nav-cta { margin-left: 8px; padding: 10px 22px; font-size: 0.875rem; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .hamburger span { width: 24px; height: 2px; background: var(--dark); transition: all 0.3s; border-radius: 2px; }
     .mobile-menu {
-      display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
-      background: #fff; border-bottom: 1px solid var(--border);
-      padding: 24px; flex-direction: column; gap: 20px; z-index: 999;
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 24px;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 999;
     }
-    .mobile-menu a { font-size: 1rem; font-weight: 500; color: var(--dark); padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--dark);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
     .mobile-menu.open { display: flex; }
 
     /* ===== HERO ===== */
     .hero {
-      position: relative; min-height: 100vh;
-      display: flex; align-items: center;
-      overflow: hidden; background: var(--dark);
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--dark);
       padding-top: var(--nav-h);
     }
     .hero-bg {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background: linear-gradient(135deg, #1a1208 0%, #2d1f08 30%, #3d2a10 60%, #1C1C1C 100%);
     }
+    /* Subtle grid texture overlay */
     .hero-bg::after {
-      content: ''; position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
       background-size: 60px 60px;
     }
-    .hero-photo { position: absolute; right: 0; top: 0; bottom: 0; width: 55%; overflow: hidden; }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
-    .hero-photo::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(90deg, var(--dark) 0%, rgba(28,28,28,0.3) 100%); z-index: 1;
+    .hero-photo {
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 55%;
+      overflow: hidden;
     }
+    .hero-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    /* Gradient overlay so text is readable */
+    .hero-photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--dark) 0%, rgba(28,28,28,0.3) 100%);
+      z-index: 1;
+    }
+    /* Placeholder if no image */
     .hero-photo .photo-placeholder {
-      width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: linear-gradient(135deg, #3d2a10 0%, #5c3d15 50%, #2d1f08 100%);
     }
-    .hero-content { position: relative; z-index: 2; max-width: 620px; }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+    }
     .hero-content .section-label { color: var(--gold-light); }
     .hero-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 20px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
     }
     .hero-title em { font-style: italic; color: var(--gold-light); }
-    .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-bottom: 36px; max-width: 500px; }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 500px;
+    }
     .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
-    .hero-stats { display: flex; gap: 40px; margin-top: 56px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.12); }
-    .hero-stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold-light); }
-    .hero-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 56px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
 
     /* ===== TRUST BAR ===== */
-    .trust-bar { background: var(--light-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 0; }
-    .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 600; color: var(--mid); }
+    .trust-bar {
+      background: var(--light-bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .trust-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--mid);
+    }
     .trust-icon { font-size: 1.2rem; }
 
     /* ===== SERVICES ===== */
     .services { padding: 100px 0; background: #fff; }
     .services-header { text-align: center; margin-bottom: 64px; }
     .services-header .section-subtitle { margin: 14px auto 0; }
-    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
     .service-card {
-      background: var(--light-bg); border: 1px solid var(--border);
-      border-radius: 8px; padding: 36px 28px;
-      transition: all 0.3s ease; position: relative; overflow: hidden;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 36px 28px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
     .service-card::before {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-      height: 3px; background: var(--gold); transform: scaleX(0);
-      transition: transform 0.3s; transform-origin: left;
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      transform-origin: left;
     }
     .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
     .service-card:hover::before { transform: scaleX(1); }
     .service-icon {
-      width: 52px; height: 52px; background: rgba(196,134,43,0.1);
-      border-radius: 12px; display: flex; align-items: center;
-      justify-content: center; font-size: 1.6rem; margin-bottom: 20px;
+      width: 52px; height: 52px;
+      background: rgba(196,134,43,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
     }
-    .service-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 10px; color: var(--dark); }
-    .service-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.65; }
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.65;
+    }
 
     /* ===== PORTFOLIO ===== */
     .portfolio { padding: 100px 0; background: var(--light-bg); }
     .portfolio-header { margin-bottom: 48px; }
     .portfolio-header .section-subtitle { max-width: 520px; }
-    .filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 32px; }
-    .filter-tab {
-      padding: 9px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: 600;
-      cursor: pointer; border: 2px solid var(--border); background: #fff; color: var(--mid); transition: all 0.2s;
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 32px;
     }
-    .filter-tab.active, .filter-tab:hover { border-color: var(--gold); background: var(--gold); color: #fff; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+    .filter-tab {
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid var(--border);
+      background: #fff;
+      color: var(--mid);
+      transition: all 0.2s;
+    }
+    .filter-tab.active, .filter-tab:hover {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: #fff;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 36px;
+    }
+    /* Featured items span 2 columns */
     .portfolio-item.featured { grid-column: span 2; }
     .portfolio-item { position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; }
     .portfolio-item.featured { aspect-ratio: 16/9; }
-    .portfolio-item .p-img { width: 100%; height: 100%; transition: transform 0.5s ease; position: relative; }
+    .portfolio-item .p-img {
+      width: 100%; height: 100%;
+      transition: transform 0.5s ease;
+      position: relative;
+    }
     .portfolio-item:hover .p-img { transform: scale(1.06); }
-    .portfolio-item .p-img img { width: 100%; height: 100%; object-fit: cover; }
-    .portfolio-item .p-img .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .portfolio-item .p-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    /* Placeholder background (will be hidden when image loads) */
+    .portfolio-item .p-img .ph {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .portfolio-item .p-overlay {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background: linear-gradient(to top, rgba(28,28,28,0.85) 0%, transparent 60%);
-      opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
     }
     .portfolio-item:hover .p-overlay { opacity: 1; }
     .p-overlay-content { color: #fff; }
     .p-overlay-content h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 4px; }
     .p-overlay-content span { font-size: 0.8rem; color: var(--gold-light); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
     .p-category-tag {
-      position: absolute; top: 14px; left: 14px;
-      background: rgba(255,255,255,0.9); color: var(--dark);
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; padding: 4px 10px; border-radius: 20px;
+      position: absolute;
+      top: 14px; left: 14px;
+      background: rgba(255,255,255,0.9);
+      color: var(--dark);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
     }
+
+    /* Placeholder gradient styles per category */
     .ph-porch { background: linear-gradient(135deg, #8B9DA8 0%, #6B8090 50%, #4A6070 100%); }
     .ph-tile-warm { background: linear-gradient(135deg, #C4A882 0%, #A8886A 50%, #8B6B4A 100%); }
     .ph-tile-cool { background: linear-gradient(135deg, #B0B8BE 0%, #909AA2 50%, #6B7880 100%); }
@@ -253,73 +459,159 @@
     .ph-tile-marble { background: linear-gradient(135deg, #E0DADA 0%, #D0C8C8 50%, #BCAEB0 100%); }
     .ph-commercial { background: linear-gradient(135deg, #8B1A1A 0%, #6B1010 50%, #4A0808 100%); }
     .ph-icon { font-size: 2.5rem; opacity: 0.3; }
+
+    /* "No image" message */
     .no-img-msg {
-      position: absolute; inset: 0; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 8px;
-      color: rgba(255,255,255,0.5); font-size: 0.75rem; text-align: center; padding: 16px;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 16px;
     }
     .no-img-msg strong { font-size: 0.8rem; color: rgba(255,255,255,0.7); display: block; }
 
     /* ===== BEFORE / AFTER ===== */
     .before-after { padding: 100px 0; background: #fff; }
     .ba-header { text-align: center; margin-bottom: 64px; }
-    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; margin: 0 auto; }
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
     .ba-card { border-radius: 8px; overflow: hidden; }
     .ba-img { aspect-ratio: 4/3; position: relative; }
     .ba-img img { width: 100%; height: 100%; object-fit: cover; }
     .ba-img .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
     .ba-label {
-      position: absolute; top: 14px; left: 14px; padding: 5px 14px;
-      border-radius: 20px; font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
+      position: absolute;
+      top: 14px; left: 14px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
     .ba-label.before { background: rgba(0,0,0,0.6); color: #fff; }
     .ba-label.after { background: var(--gold); color: #fff; }
-    .ba-caption { padding: 16px 20px; background: var(--light-bg); font-size: 0.88rem; color: var(--mid); font-weight: 500; }
+    .ba-caption {
+      padding: 16px 20px;
+      background: var(--light-bg);
+      font-size: 0.88rem;
+      color: var(--mid);
+      font-weight: 500;
+    }
 
     /* ===== PROCESS ===== */
     .process { padding: 100px 0; background: var(--light-bg); }
     .process-header { text-align: center; margin-bottom: 64px; }
-    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
     .process-steps::before {
-      content: ''; position: absolute; top: 30px; left: 10%; right: 10%;
-      height: 2px; background: linear-gradient(90deg, var(--border), var(--gold), var(--border));
+      content: '';
+      position: absolute;
+      top: 30px; left: 10%; right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--border), var(--gold), var(--border));
     }
     .process-step { text-align: center; position: relative; }
     .step-num {
-      width: 60px; height: 60px; border-radius: 50%;
-      background: var(--gold); color: #fff;
-      font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px; position: relative; z-index: 1;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
       box-shadow: 0 4px 16px rgba(196,134,43,0.35);
     }
-    .step-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; color: var(--dark); }
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
     .step-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.6; }
 
     /* ===== ABOUT ===== */
     .about { padding: 100px 0; background: #fff; }
-    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
     .about-img-wrap { position: relative; }
-    .about-img-main { aspect-ratio: 4/5; border-radius: 8px; overflow: hidden; position: relative; }
+    .about-img-main {
+      aspect-ratio: 4/5;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
     .about-img-main img { width: 100%; height: 100%; object-fit: cover; }
     .about-img-main .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
     .about-badge {
-      position: absolute; bottom: -20px; right: -20px;
-      width: 130px; height: 130px; background: var(--gold);
-      border-radius: 50%; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; color: #fff;
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 130px; height: 130px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
       box-shadow: 0 8px 30px rgba(196,134,43,0.4);
     }
-    .about-badge .badge-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; line-height: 1; }
+    .about-badge .badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
     .about-badge .badge-text { font-size: 0.72rem; font-weight: 600; text-align: center; line-height: 1.3; text-transform: uppercase; letter-spacing: 0.05em; }
     .about-content .section-subtitle { max-width: 100%; }
-    .about-features { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
-    .about-feature { display: flex; align-items: flex-start; gap: 14px; }
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
     .af-check {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(196,134,43,0.12); color: var(--gold); font-size: 0.9rem;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(196,134,43,0.12);
+      color: var(--gold);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
     .af-text { font-size: 0.92rem; color: var(--mid); line-height: 1.6; }
     .af-text strong { color: var(--dark); }
@@ -329,14 +621,24 @@
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
     .stat-box { border-right: 1px solid rgba(255,255,255,0.1); }
     .stat-box:last-child { border-right: none; }
-    .stat-number { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--gold-light); }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--gold-light);
+    }
     .stat-desc { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
 
     /* ===== TESTIMONIALS ===== */
     .testimonials { padding: 100px 0; background: var(--light-bg); }
     .testimonials-header { text-align: center; margin-bottom: 56px; }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .testimonial-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 32px 28px; }
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px 28px;
+    }
     .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
     .testimonial-text { font-size: 0.92rem; color: var(--mid); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
     .testimonial-author { font-weight: 600; font-size: 0.88rem; color: var(--dark); }
@@ -349,29 +651,56 @@
     .contact-details { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
     .contact-detail { display: flex; align-items: flex-start; gap: 16px; }
     .cd-icon {
-      width: 44px; height: 44px; border-radius: 10px;
-      background: rgba(196,134,43,0.1); color: var(--gold); font-size: 1.1rem;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(196,134,43,0.1);
+      color: var(--gold);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
     .cd-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600; margin-bottom: 2px; }
     .cd-value { font-size: 0.95rem; color: var(--dark); font-weight: 500; }
-    .contact-form-wrap { background: var(--light-bg); border: 1px solid var(--border); border-radius: 10px; padding: 40px; }
+    .contact-form-wrap {
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 40px;
+    }
     .form-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 24px; color: var(--dark); }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--dark); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
     .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 12px 16px; border: 1.5px solid var(--border);
-      border-radius: 6px; font-size: 0.93rem; font-family: 'Inter', sans-serif;
-      color: var(--dark); background: #fff; transition: border-color 0.2s; outline: none;
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.93rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      background: #fff;
+      transition: border-color 0.2s;
+      outline: none;
     }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
     .form-group textarea { resize: vertical; min-height: 100px; }
     .form-submit { width: 100%; padding: 14px; font-size: 0.95rem; justify-content: center; margin-top: 4px; }
 
     /* ===== CTA BAND ===== */
-    .cta-band { padding: 80px 0; background: linear-gradient(135deg, #2d1f08 0%, #1C1C1C 100%); text-align: center; }
-    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin-bottom: 14px; }
+    .cta-band {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #2d1f08 0%, #1C1C1C 100%);
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: #fff;
+      margin-bottom: 14px;
+    }
     .cta-band p { color: rgba(255,255,255,0.65); font-size: 1.05rem; margin-bottom: 36px; }
     .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
@@ -385,8 +714,12 @@
     .footer-col a { display: block; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 10px; transition: color 0.2s; }
     .footer-col a:hover { color: var(--gold-light); }
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px;
-      display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -397,6 +730,7 @@
       .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .stat-box { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 24px; margin-bottom: 8px; }
+      .stat-box:nth-child(2n) { border-bottom: 1px solid rgba(255,255,255,0.1); }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -420,6 +754,276 @@
       .portfolio-item.featured { grid-column: span 1; aspect-ratio: 4/3; }
       .services-grid { grid-template-columns: 1fr; }
     }
+
+    /* ===== ADMIN SYSTEM ===== */
+    #adminBar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 48px;
+      background: #12121f;
+      border-bottom: 2px solid var(--gold);
+      display: none;
+      align-items: center;
+      padding: 0 20px;
+      gap: 10px;
+      z-index: 99999;
+      font-family: 'Inter', sans-serif;
+    }
+    body.admin-active #adminBar { display: flex; }
+    body.admin-active { padding-top: 48px; }
+    body.admin-active #navbar { top: 48px !important; }
+    body.admin-active .mobile-menu { top: calc(48px + 74px) !important; }
+
+    .admin-bar-brand {
+      color: var(--gold);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-right: auto;
+      white-space: nowrap;
+    }
+    .admin-bar-brand span { color: rgba(255,255,255,0.35); font-weight: 400; margin-left: 6px; }
+    .admin-btn {
+      padding: 5px 13px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .admin-btn-edit {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .admin-btn-edit:hover { background: rgba(255,255,255,0.14); color: #fff; }
+    .admin-btn-edit.active { background: #059669; color: #fff; border-color: #059669; }
+    .admin-btn-publish { background: var(--gold); color: #fff; }
+    .admin-btn-publish:hover { background: var(--gold-light); }
+    .admin-btn-logout { background: transparent; color: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.12); }
+    .admin-btn-logout:hover { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
+
+    /* === Modals === */
+    .admin-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100000;
+      backdrop-filter: blur(5px);
+    }
+    .admin-modal {
+      background: #fff;
+      border-radius: 18px;
+      padding: 40px;
+      width: 380px;
+      max-width: 92vw;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.28);
+      position: relative;
+    }
+    .admin-modal-wide { width: 460px; }
+    .admin-modal h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      color: #1C1C1C;
+      margin-bottom: 4px;
+    }
+    .admin-modal h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #1C1C1C;
+      margin-bottom: 4px;
+    }
+    .admin-modal-sub { color: #999; font-size: 0.82rem; margin-bottom: 28px; }
+    .admin-modal p { color: #666; font-size: 0.83rem; line-height: 1.65; margin-bottom: 18px; }
+
+    .admin-field { margin-bottom: 16px; }
+    .admin-field label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #777;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .admin-field input[type="email"],
+    .admin-field input[type="password"],
+    .admin-field input[type="url"],
+    .admin-field input[type="file"],
+    .admin-field input[type="text"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #E5DDD4;
+      border-radius: 9px;
+      font-size: 0.88rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+      color: #1C1C1C;
+    }
+    .admin-field input:focus { border-color: var(--gold); }
+
+    .admin-primary-btn {
+      width: 100%;
+      padding: 12px;
+      background: var(--gold);
+      color: #fff;
+      border: none;
+      border-radius: 9px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .admin-primary-btn:hover { background: var(--gold-light); }
+
+    #adminLoginError {
+      color: #dc2626;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+      display: none;
+      padding: 8px 12px;
+      background: #fef2f2;
+      border-radius: 6px;
+      border: 1px solid #fecaca;
+    }
+    .admin-modal-hint { color: #bbb; font-size: 0.75rem; text-align: center; margin-top: 14px; }
+
+    /* Edit mode */
+    body.admin-edit-mode [data-editable] {
+      outline: 2px dashed rgba(196,134,43,0.4);
+      outline-offset: 3px;
+      cursor: text;
+      border-radius: 3px;
+      transition: outline 0.15s;
+    }
+    body.admin-edit-mode [data-editable]:hover {
+      outline: 2px dashed var(--gold);
+      background: rgba(196,134,43,0.04);
+    }
+    body.admin-edit-mode [data-editable]:focus {
+      outline: 2px solid var(--gold);
+      background: rgba(196,134,43,0.05);
+    }
+
+    /* Image overlay */
+    .admin-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.42);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+      cursor: pointer;
+      z-index: 20;
+      border-radius: inherit;
+    }
+    .admin-img-parent { position: relative !important; }
+    .admin-img-parent:hover .admin-img-overlay { opacity: 1; }
+    .admin-img-overlay-btn {
+      background: #fff;
+      color: #1C1C1C;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      pointer-events: none;
+      letter-spacing: 0.02em;
+    }
+
+    /* Image modal extras */
+    .admin-img-preview-wrap {
+      width: 100%;
+      height: 150px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1.5px solid #E5DDD4;
+      background: #f5f0eb;
+      margin-bottom: 20px;
+    }
+    .admin-img-preview-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .admin-tabs { display: flex; gap: 0; margin-bottom: 16px; border-bottom: 1.5px solid #E5DDD4; }
+    .admin-tab-btn {
+      padding: 7px 16px;
+      border: none;
+      background: transparent;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      color: #aaa;
+      border-bottom: 2.5px solid transparent;
+      margin-bottom: -1.5px;
+      transition: color 0.2s;
+    }
+    .admin-tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .admin-tab-pane { display: none; }
+    .admin-tab-pane.active { display: block; }
+
+    .admin-modal-actions { display: flex; gap: 10px; margin-top: 20px; }
+    .admin-modal-apply {
+      flex: 1; padding: 10px; background: var(--gold); color: #fff; border: none;
+      border-radius: 9px; font-size: 0.86rem; font-weight: 700; cursor: pointer;
+      font-family: 'Inter', sans-serif; transition: background 0.2s;
+    }
+    .admin-modal-apply:hover { background: var(--gold-light); }
+    .admin-modal-cancel {
+      padding: 10px 18px; background: transparent; color: #999; border: 1.5px solid #E5DDD4;
+      border-radius: 9px; font-size: 0.86rem; font-weight: 600; cursor: pointer;
+      font-family: 'Inter', sans-serif; transition: all 0.2s;
+    }
+    .admin-modal-cancel:hover { border-color: #ccc; color: #555; }
+
+    /* PAT instructions box */
+    .admin-steps-box {
+      background: #faf8f5;
+      border: 1px solid #E5DDD4;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 0.79rem;
+      color: #666;
+      line-height: 1.85;
+    }
+    .admin-steps-box strong { color: #333; }
+
+    /* Toast */
+    #adminToast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1C1C1C;
+      color: #fff;
+      padding: 13px 18px;
+      border-radius: 11px;
+      font-size: 0.83rem;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+      display: none;
+      align-items: center;
+      gap: 8px;
+      z-index: 100002;
+      max-width: 380px;
+      line-height: 1.4;
+    }
+    #adminToast.success { border-left: 4px solid #10b981; }
+    #adminToast.error { border-left: 4px solid #dc2626; }
+    #adminToast.loading { border-left: 4px solid var(--gold); }
   </style>
 </head>
 <body>
@@ -443,6 +1047,7 @@
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#services" onclick="toggleMenu()">Services</a>
     <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
@@ -455,24 +1060,34 @@
   <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="hero-photo">
+      <!-- Replace this placeholder with your best project photo -->
       <img src="images/porch-after-2.jpg" alt="Renovations by Matt - Completed porch project" onerror="this.style.display='none'" />
       <div class="photo-placeholder ph-porch" id="heroPh" style="display:none">
-        <span style="font-size:4rem; opacity:0.15;">&#127969;</span>
+        <span style="font-size:4rem; opacity:0.15;">🏡</span>
       </div>
     </div>
     <div class="container">
       <div class="hero-content">
         <p class="section-label">Serving Your Community</p>
         <h1 class="hero-title">Craftsmanship That <em>Transforms</em> Your Home</h1>
-        <p class="hero-desc">From stunning custom tile showers to beautiful porch additions, Renovations by Matt brings decades of skilled craftsmanship to every project &mdash; large or small.</p>
+        <p class="hero-desc">From stunning custom tile showers to beautiful porch additions, Renovations by Matt brings decades of skilled craftsmanship to every project — large or small.</p>
         <div class="hero-buttons">
           <a href="#contact"><button class="btn btn-primary">Get a Free Quote &#8594;</button></a>
           <a href="#portfolio"><button class="btn btn-outline-white">View Our Work</button></a>
         </div>
         <div class="hero-stats">
-          <div><div class="hero-stat-num">20+</div><div class="hero-stat-label">Years Experience</div></div>
-          <div><div class="hero-stat-num">500+</div><div class="hero-stat-label">Projects Completed</div></div>
-          <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Satisfaction Guarantee</div></div>
+          <div>
+            <div class="hero-stat-num">20+</div>
+            <div class="hero-stat-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">500+</div>
+            <div class="hero-stat-label">Projects Completed</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">Satisfaction Guarantee</div>
+          </div>
         </div>
       </div>
     </div>
@@ -482,11 +1097,11 @@
   <div class="trust-bar">
     <div class="container">
       <div class="trust-bar-inner">
-        <div class="trust-item"><span class="trust-icon">&#9989;</span> Licensed &amp; Insured</div>
-        <div class="trust-item"><span class="trust-icon">&#127942;</span> 20+ Years Experience</div>
-        <div class="trust-item"><span class="trust-icon">&#128172;</span> Free Estimates</div>
-        <div class="trust-item"><span class="trust-icon">&#128296;</span> Quality Materials</div>
-        <div class="trust-item"><span class="trust-icon">&#11088;</span> 5-Star Rated</div>
+        <div class="trust-item"><span class="trust-icon">✅</span> Licensed &amp; Insured</div>
+        <div class="trust-item"><span class="trust-icon">🏆</span> 20+ Years Experience</div>
+        <div class="trust-item"><span class="trust-icon">💬</span> Free Estimates</div>
+        <div class="trust-item"><span class="trust-icon">🔨</span> Quality Materials</div>
+        <div class="trust-item"><span class="trust-icon">⭐</span> 5-Star Rated</div>
       </div>
     </div>
   </div>
@@ -497,26 +1112,26 @@
       <div class="services-header">
         <p class="section-label">What We Do</p>
         <h2 class="section-title">Expert Renovation Services</h2>
-        <p class="section-subtitle">We handle every detail from start to finish &mdash; delivering quality results that stand the test of time.</p>
+        <p class="section-subtitle">We handle every detail from start to finish — delivering quality results that stand the test of time.</p>
       </div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">&#127963;</div>
+          <div class="service-icon">🏛️</div>
           <h3 class="service-title">Porches &amp; Exteriors</h3>
           <p class="service-desc">Custom porch additions, gabled rooflines, decorative columns, stone steps, and railings. We transform curb appeal from the ground up.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128705;</div>
+          <div class="service-icon">🛁</div>
           <h3 class="service-title">Custom Tile &amp; Bathrooms</h3>
-          <p class="service-desc">Handcrafted tile installations for showers, tub surrounds, and floors. From classic travertine to modern marble-look &mdash; every pattern, every detail.</p>
+          <p class="service-desc">Handcrafted tile installations for showers, tub surrounds, and floors. From classic travertine to modern marble-look — every pattern, every detail.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#127859;</div>
+          <div class="service-icon">🍳</div>
           <h3 class="service-title">Kitchen Remodeling</h3>
           <p class="service-desc">Full kitchen renovations including custom tile backsplashes, countertop installation, cabinetry work, and complete layout transformations.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#127968;</div>
+          <div class="service-icon">🏠</div>
           <h3 class="service-title">General Remodeling</h3>
           <p class="service-desc">From basement buildouts to commercial tile work, we take on the projects others won't. Skilled, reliable, and committed to getting it right.</p>
         </div>
@@ -530,7 +1145,7 @@
       <div class="portfolio-header">
         <p class="section-label">Our Work</p>
         <h2 class="section-title">Projects We're Proud Of</h2>
-        <p class="section-subtitle">A selection of recent renovations &mdash; each one built to the same high standard we bring to every job.</p>
+        <p class="section-subtitle">A selection of recent renovations — each one built to the same high standard we bring to every job.</p>
         <div class="filter-tabs">
           <button class="filter-tab active" onclick="filterGallery('all', this)">All Projects</button>
           <button class="filter-tab" onclick="filterGallery('porch', this)">Porches &amp; Exterior</button>
@@ -538,103 +1153,156 @@
           <button class="filter-tab" onclick="filterGallery('commercial', this)">Commercial</button>
         </div>
       </div>
+
       <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- FEATURED: Porch After -->
         <div class="portfolio-item featured" data-cat="porch">
           <div class="p-img">
-            <img src="images/porch-after-2.jpg" alt="Completed porch" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
-            <div class="ph ph-porch" style="display:none"><span class="no-img-msg"><strong>Porch Renovation</strong>Add images/porch-after-2.jpg</span></div>
+            <img src="images/porch-after-2.jpg" alt="Completed porch with cedar ceiling and recessed lights" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <div class="ph ph-porch" style="display:none"><span class="no-img-msg"><strong>Porch Renovation — After</strong>Add images/porch-after-2.jpg</span></div>
           </div>
           <span class="p-category-tag">Porch &amp; Exterior</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Gabled Porch Addition</h4><span>Complete exterior renovation</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content">
+              <h4>Gabled Porch Addition</h4>
+              <span>Complete exterior renovation</span>
+            </div>
+          </div>
         </div>
+
+        <!-- Tile 02: Full bathroom travertine -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-02.jpg" alt="Travertine bathroom" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-02.jpg" alt="Travertine bathroom with glass shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-warm" style="display:none"><span class="no-img-msg"><strong>Travertine Bathroom</strong>Add images/tile-02.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Travertine Master Bath</h4><span>Glass shower + jacuzzi tub</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Travertine Master Bath</h4><span>Glass shower + jacuzzi tub</span></div>
+          </div>
         </div>
+
+        <!-- Tile 11: Marble ceiling shower -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-11.jpg" alt="Marble ceiling shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-11.jpg" alt="Marble-look shower with tiled ceiling" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-marble" style="display:none"><span class="no-img-msg"><strong>Marble Ceiling Shower</strong>Add images/tile-11.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Marble-Look Shower</h4><span>Full tile ceiling + recessed light</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Marble-Look Shower</h4><span>Full tile ceiling + recessed light</span></div>
+          </div>
         </div>
+
+        <!-- Tile 15: Full bathroom marble + wood floor -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-15.jpg" alt="Marble shower wood floor" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-15.jpg" alt="Marble shower with dark wood plank floor" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-marble" style="display:none"><span class="no-img-msg"><strong>Marble Bath Remodel</strong>Add images/tile-15.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Marble Shower Bath</h4><span>Wood-plank floor + glass shower</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Marble Shower Bath</h4><span>Wood-plank floor + glass shower</span></div>
+          </div>
         </div>
+
+        <!-- Tile 01: Brown diamond pattern -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-01.jpg" alt="Diamond tile shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-01.jpg" alt="Diamond pattern tile shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-warm" style="display:none"><span class="no-img-msg"><strong>Diamond Tile Shower</strong>Add images/tile-01.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Diamond Pattern Shower</h4><span>Custom mosaic accent border</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Diamond Pattern Shower</h4><span>Custom mosaic accent border</span></div>
+          </div>
         </div>
+
+        <!-- Tile 14: Pebble stone walls -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-14.jpg" alt="Pebble stone shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-14.jpg" alt="Pebble stone shower walls with corner seat" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-warm" style="display:none"><span class="no-img-msg"><strong>Pebble Stone Shower</strong>Add images/tile-14.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Natural Pebble Shower</h4><span>River pebble walls + built-in bench</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Natural Pebble Shower</h4><span>River pebble walls + built-in bench</span></div>
+          </div>
         </div>
+
+        <!-- Porch after 1 -->
         <div class="portfolio-item" data-cat="porch">
           <div class="p-img">
-            <img src="images/porch-after-1.jpg" alt="Porch with recessed lighting" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/porch-after-1.jpg" alt="Completed porch with recessed lighting" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-porch" style="display:none"><span class="no-img-msg"><strong>Porch After</strong>Add images/porch-after-1.jpg</span></div>
           </div>
           <span class="p-category-tag">Porch &amp; Exterior</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Front Porch Renovation</h4><span>Cedar ceiling, stone steps, railings</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Front Porch Renovation</h4><span>Cedar ceiling, stone steps, railings</span></div>
+          </div>
         </div>
+
+        <!-- Tile 08: Rust slate shower -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-08.jpg" alt="Rust slate shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-08.jpg" alt="Rust and slate diamond shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-dark" style="display:none"><span class="no-img-msg"><strong>Slate Diamond Shower</strong>Add images/tile-08.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Slate &amp; Rust Shower</h4><span>Bold diagonal pattern</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Slate &amp; Rust Shower</h4><span>Bold diagonal pattern</span></div>
+          </div>
         </div>
+
+        <!-- Commercial: Pizza counter -->
         <div class="portfolio-item" data-cat="commercial">
           <div class="p-img">
-            <img src="images/commercial-01.jpg" alt="Commercial tile counter" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/commercial-01.jpg" alt="Commercial red tile counter installation" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-commercial" style="display:none"><span class="no-img-msg"><strong>Commercial Tile</strong>Add images/commercial-01.jpg</span></div>
           </div>
           <span class="p-category-tag">Commercial</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Commercial Tile Counter</h4><span>Restaurant counter installation</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Commercial Tile Counter</h4><span>Restaurant counter installation</span></div>
+          </div>
         </div>
+
+        <!-- Tile 05: Pebble floor neutral -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-05.jpg" alt="Neutral pebble shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-05.jpg" alt="Neutral gray tile shower with pebble floor" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-cool" style="display:none"><span class="no-img-msg"><strong>Neutral Pebble Shower</strong>Add images/tile-05.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Walk-In Shower</h4><span>Natural pebble floor, glass shelf</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Walk-In Shower</h4><span>Natural pebble floor, glass shelf</span></div>
+          </div>
         </div>
+
+        <!-- Tile 13: Open walk-in, double corner shelves -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-13.jpg" alt="Open walk-in shower" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-13.jpg" alt="Open walk-in shower with double corner shelves" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-warm" style="display:none"><span class="no-img-msg"><strong>Open Walk-In Shower</strong>Add images/tile-13.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Custom Walk-In Shower</h4><span>Double corner shelves, open entry</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Custom Walk-In Shower</h4><span>Double corner shelves, open entry</span></div>
+          </div>
         </div>
+
+        <!-- Tile 12: Tan tub surround with arch -->
         <div class="portfolio-item" data-cat="tile">
           <div class="p-img">
-            <img src="images/tile-12.jpg" alt="Tan tub surround" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/tile-12.jpg" alt="Tan tub surround with decorative border" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-tile-warm" style="display:none"><span class="no-img-msg"><strong>Tub Surround</strong>Add images/tile-12.jpg</span></div>
           </div>
           <span class="p-category-tag">Tile &amp; Bathrooms</span>
-          <div class="p-overlay"><div class="p-overlay-content"><h4>Tub Surround Tile</h4><span>Arched design + decorative border</span></div></div>
+          <div class="p-overlay">
+            <div class="p-overlay-content"><h4>Tub Surround Tile</h4><span>Arched design + decorative border</span></div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -650,7 +1318,7 @@
       <div class="ba-grid">
         <div class="ba-card">
           <div class="ba-img">
-            <img src="images/porch-before-2.jpg" alt="Porch before" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/porch-before-2.jpg" alt="Porch before renovation" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-porch" style="display:none"><span class="no-img-msg"><strong>Before</strong>Add images/porch-before-2.jpg</span></div>
             <span class="ba-label before">BEFORE</span>
           </div>
@@ -658,7 +1326,7 @@
         </div>
         <div class="ba-card">
           <div class="ba-img">
-            <img src="images/porch-after-2.jpg" alt="Porch after" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
+            <img src="images/porch-after-2.jpg" alt="Porch after renovation" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-porch" style="display:none"><span class="no-img-msg"><strong>After</strong>Add images/porch-after-2.jpg</span></div>
             <span class="ba-label after">AFTER</span>
           </div>
@@ -672,10 +1340,22 @@
   <div class="stats-band">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-box"><div class="stat-number">20+</div><div class="stat-desc">Years in Business</div></div>
-        <div class="stat-box"><div class="stat-number">500+</div><div class="stat-desc">Projects Completed</div></div>
-        <div class="stat-box"><div class="stat-number">100%</div><div class="stat-desc">Client Satisfaction</div></div>
-        <div class="stat-box"><div class="stat-number">0</div><div class="stat-desc">Unfinished Jobs</div></div>
+        <div class="stat-box">
+          <div class="stat-number">20+</div>
+          <div class="stat-desc">Years in Business</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">500+</div>
+          <div class="stat-desc">Projects Completed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-desc">Client Satisfaction</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">0</div>
+          <div class="stat-desc">Unfinished Jobs</div>
+        </div>
       </div>
     </div>
   </div>
@@ -692,12 +1372,12 @@
         <div class="process-step">
           <div class="step-num">1</div>
           <h4 class="step-title">Free Consultation</h4>
-          <p class="step-desc">We discuss your vision, budget, and timeline. No pressure, no obligation &mdash; just honest advice.</p>
+          <p class="step-desc">We discuss your vision, budget, and timeline. No pressure, no obligation — just honest advice.</p>
         </div>
         <div class="process-step">
           <div class="step-num">2</div>
           <h4 class="step-title">Detailed Quote</h4>
-          <p class="step-desc">You receive a clear, itemized estimate &mdash; no surprises, no hidden fees. Just straightforward pricing.</p>
+          <p class="step-desc">You receive a clear, itemized estimate — no surprises, no hidden fees. Just straightforward pricing.</p>
         </div>
         <div class="process-step">
           <div class="step-num">3</div>
@@ -707,7 +1387,7 @@
         <div class="process-step">
           <div class="step-num">4</div>
           <h4 class="step-title">Final Walkthrough</h4>
-          <p class="step-desc">We review every detail together. You're not satisfied until we are &mdash; that's our promise.</p>
+          <p class="step-desc">We review every detail together. You're not satisfied until we are — that's our promise.</p>
         </div>
       </div>
     </div>
@@ -719,6 +1399,7 @@
       <div class="about-inner">
         <div class="about-img-wrap">
           <div class="about-img-main">
+            <!-- Swap this with a photo of Matt or a hero project image -->
             <img src="images/porch-during.jpg" alt="Matt working on a renovation project" onerror="this.parentElement.querySelector('.ph').style.display='flex'; this.style.display='none'" />
             <div class="ph ph-porch" style="display:none"><span class="no-img-msg"><strong>Add a photo of Matt</strong>images/porch-during.jpg</span></div>
           </div>
@@ -730,23 +1411,23 @@
         <div class="about-content">
           <p class="section-label">About Us</p>
           <h2 class="section-title">Built on Reputation, Backed by Skill</h2>
-          <p class="section-subtitle">Matt has been transforming homes for over two decades. From intricate custom tile work to complete exterior overhauls, every project gets the same level of care and attention to detail &mdash; no shortcuts, no excuses.</p>
+          <p class="section-subtitle">Matt has been transforming homes for over two decades. From intricate custom tile work to complete exterior overhauls, every project gets the same level of care and attention to detail — no shortcuts, no excuses.</p>
           <div class="about-features">
             <div class="about-feature">
-              <div class="af-check">&#10003;</div>
-              <p class="af-text"><strong>Master Tile Installer</strong> &mdash; Specializing in custom patterns, natural stone, and precision layout for showers, floors, and countertops.</p>
+              <div class="af-check">✓</div>
+              <p class="af-text"><strong>Master Tile Installer</strong> — Specializing in custom patterns, natural stone, and precision layout for showers, floors, and countertops.</p>
             </div>
             <div class="about-feature">
-              <div class="af-check">&#10003;</div>
-              <p class="af-text"><strong>Full-Service Renovator</strong> &mdash; We handle everything: framing, waterproofing, tile, fixtures, trim work, and finishing details.</p>
+              <div class="af-check">✓</div>
+              <p class="af-text"><strong>Full-Service Renovator</strong> — We handle everything: framing, waterproofing, tile, fixtures, trim work, and finishing details.</p>
             </div>
             <div class="about-feature">
-              <div class="af-check">&#10003;</div>
-              <p class="af-text"><strong>Residential &amp; Commercial</strong> &mdash; From master bath remodels to commercial counters, we bring professional results to every project.</p>
+              <div class="af-check">✓</div>
+              <p class="af-text"><strong>Residential &amp; Commercial</strong> — From master bath remodels to commercial counters, we bring professional results to every project.</p>
             </div>
             <div class="about-feature">
-              <div class="af-check">&#10003;</div>
-              <p class="af-text"><strong>Honest &amp; Reliable</strong> &mdash; We show up when we say, finish what we start, and stand behind our work long after the job is done.</p>
+              <div class="af-check">✓</div>
+              <p class="af-text"><strong>Honest &amp; Reliable</strong> — We show up when we say, finish what we start, and stand behind our work long after the job is done.</p>
             </div>
           </div>
           <div style="margin-top: 36px;">
@@ -766,20 +1447,20 @@
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"Matt completely transformed our master bathroom. The custom tile work is absolutely stunning &mdash; we get compliments from everyone who sees it. Professional, clean, and finished exactly on schedule."</p>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Matt completely transformed our master bathroom. The custom tile work is absolutely stunning — we get compliments from everyone who sees it. He was professional, clean, and finished exactly on schedule."</p>
           <div class="testimonial-author">Sarah M.</div>
           <div class="testimonial-location">Bathroom Remodel</div>
         </div>
         <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"We hired Matt to add a front porch and couldn't be happier. From the gabled roof to the cedar ceiling and stone steps &mdash; it looks like it was always meant to be there. Incredible craftsmanship."</p>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We hired Matt to add a front porch to our home and couldn't be happier. From the gabled roof to the cedar ceiling and stone steps — it looks like it was always meant to be there. Incredible craftsmanship."</p>
           <div class="testimonial-author">Tom &amp; Linda R.</div>
           <div class="testimonial-location">Porch Addition</div>
         </div>
         <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"I've used Matt for three different projects. He's the only contractor I trust. Honest pricing, quality work, and he treats your home like his own. Highly recommend without hesitation."</p>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I've used Matt for three different projects over the years. He's the only contractor I trust. Honest pricing, quality work, and he treats your home like his own. Highly recommend without hesitation."</p>
           <div class="testimonial-author">James K.</div>
           <div class="testimonial-location">Multiple Projects</div>
         </div>
@@ -797,20 +1478,32 @@
           <p class="section-subtitle">Ready to get started? Reach out for a free, no-obligation estimate. We'll come see the space and give you an honest assessment and fair price.</p>
           <div class="contact-details">
             <div class="contact-detail">
-              <div class="cd-icon">&#128222;</div>
-              <div><div class="cd-label">Phone</div><div class="cd-value">(555) 000-0000</div></div>
+              <div class="cd-icon">📞</div>
+              <div>
+                <div class="cd-label">Phone</div>
+                <div class="cd-value">(555) 000-0000</div>
+              </div>
             </div>
             <div class="contact-detail">
-              <div class="cd-icon">&#9993;</div>
-              <div><div class="cd-label">Email</div><div class="cd-value">matt@renovationsbymatt.com</div></div>
+              <div class="cd-icon">✉️</div>
+              <div>
+                <div class="cd-label">Email</div>
+                <div class="cd-value">matt@renovationsbymatt.com</div>
+              </div>
             </div>
             <div class="contact-detail">
-              <div class="cd-icon">&#128336;</div>
-              <div><div class="cd-label">Hours</div><div class="cd-value">Mon&ndash;Fri: 7am &ndash; 6pm &nbsp;|&nbsp; Sat: By Appointment</div></div>
+              <div class="cd-icon">🕐</div>
+              <div>
+                <div class="cd-label">Hours</div>
+                <div class="cd-value">Mon–Fri: 7am – 6pm &nbsp;|&nbsp; Sat: By Appointment</div>
+              </div>
             </div>
             <div class="contact-detail">
-              <div class="cd-icon">&#128205;</div>
-              <div><div class="cd-label">Service Area</div><div class="cd-value">Serving the Greater Metro Area</div></div>
+              <div class="cd-icon">📍</div>
+              <div>
+                <div class="cd-label">Service Area</div>
+                <div class="cd-value">Serving the Greater Metro Area</div>
+              </div>
             </div>
           </div>
         </div>
@@ -818,12 +1511,24 @@
           <h3 class="form-title">Request a Free Estimate</h3>
           <form onsubmit="handleFormSubmit(event)">
             <div class="form-row">
-              <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required /></div>
-              <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith" required /></div>
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Smith" required />
+              </div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 000-0000" /></div>
-              <div class="form-group"><label>Email</label><input type="email" placeholder="john@email.com" required /></div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="(555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="john@email.com" required />
+              </div>
             </div>
             <div class="form-group">
               <label>Project Type</label>
@@ -855,7 +1560,7 @@
       <p>Every great project starts with a conversation. Let's talk about what you have in mind.</p>
       <div class="cta-buttons">
         <a href="#contact"><button class="btn btn-primary">Get a Free Quote</button></a>
-        <a href="tel:5550000000"><button class="btn btn-outline-white">&#128222; Call Now</button></a>
+        <a href="tel:5550000000"><button class="btn btn-outline-white">📞 Call Now</button></a>
       </div>
     </div>
   </div>
@@ -867,7 +1572,7 @@
         <div class="footer-brand">
           <div class="brand-name">Renovations by Matt</div>
           <div class="brand-sub">Quality Craftsmanship</div>
-          <p>Bringing skill, integrity, and attention to detail to every project &mdash; from custom tile showers to full exterior renovations.</p>
+          <p>Bringing skill, integrity, and attention to detail to every project — from custom tile showers to full exterior renovations.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
@@ -899,23 +1604,31 @@
   </footer>
 
   <script>
+    // ===== NAVIGATION SCROLL EFFECT =====
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
     });
 
+    // ===== MOBILE MENU =====
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('open');
     }
 
+    // ===== PORTFOLIO FILTER =====
     function filterGallery(category, btn) {
+      // Update active tab
       document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
+
+      // Show/hide items
       const items = document.querySelectorAll('.portfolio-item');
       items.forEach(item => {
         const cat = item.dataset.cat;
         const show = category === 'all' || cat === category;
         item.style.display = show ? 'block' : 'none';
+
+        // Remove "featured" for porch-only filter so layout stays clean
         if (category !== 'all' && category !== 'porch') {
           item.classList.remove('featured');
         } else if (item.dataset.featured) {
@@ -924,28 +1637,37 @@
       });
     }
 
+    // Mark featured item
     document.querySelector('.portfolio-item.featured').dataset.featured = 'true';
 
+    // ===== FORM SUBMISSION =====
     function handleFormSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('.form-submit');
-      btn.textContent = 'Message Sent! We\'ll be in touch soon.';
+      btn.textContent = '✓ Message Sent! We\'ll be in touch soon.';
       btn.style.background = '#2a7d2e';
       btn.disabled = true;
     }
 
+    // ===== SMOOTH SCROLL for older browsers =====
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     });
 
+    // ===== HERO IMAGE FALLBACK =====
+    // Show placeholder if hero image fails
     const heroPh = document.getElementById('heroPh');
     document.querySelector('.hero-photo img').addEventListener('error', () => {
       if (heroPh) heroPh.style.display = 'flex';
     });
 
+    // ===== ANIMATE STATS ON SCROLL =====
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -961,6 +1683,425 @@
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
       observer.observe(el);
     });
+  </script>
+
+
+  <!-- ========================================================
+       ADMIN VISUAL EDITOR
+       Access: Press Alt + Shift + A  (or triple-click the footer)
+       Login: Luke@neuluma.com / your password
+  ======================================================== -->
+
+  <!-- Admin Toolbar -->
+  <div id="adminBar">
+    <span class="admin-bar-brand">⚙ RBM Admin <span>· Visual Editor</span></span>
+    <button class="admin-btn admin-btn-edit" id="adminEditBtn" onclick="ADMIN.toggleEdit()">✏ Edit Mode</button>
+    <button class="admin-btn admin-btn-publish" onclick="ADMIN.startPublish()">📤 Publish Live</button>
+    <button class="admin-btn admin-btn-logout" onclick="ADMIN.logout()">Sign Out</button>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="admin-overlay" id="adminLoginModal">
+    <div class="admin-modal">
+      <h2>Admin Login</h2>
+      <p class="admin-modal-sub">Renovations by Matt · Site Editor</p>
+      <div class="admin-field">
+        <label>Email Address</label>
+        <input type="email" id="adminEmail" placeholder="you@example.com" autocomplete="email" />
+      </div>
+      <div class="admin-field">
+        <label>Password</label>
+        <input type="password" id="adminPassword" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <div id="adminLoginError">Incorrect email or password. Please try again.</div>
+      <button class="admin-primary-btn" onclick="ADMIN.login()">Sign In →</button>
+      <p class="admin-modal-hint">Press Esc to close</p>
+    </div>
+  </div>
+
+  <!-- Image Replace Modal -->
+  <div class="admin-overlay" id="adminImageModal">
+    <div class="admin-modal admin-modal-wide">
+      <h3>🖼 Replace Image</h3>
+      <p class="admin-modal-sub">Choose a new image from URL or upload a file</p>
+      <div class="admin-img-preview-wrap">
+        <img id="adminImgPreview" src="" alt="Current image" />
+      </div>
+      <div class="admin-tabs">
+        <button class="admin-tab-btn active" id="tabBtnUrl" onclick="ADMIN.switchTab('url')">From URL</button>
+        <button class="admin-tab-btn" id="tabBtnUpload" onclick="ADMIN.switchTab('upload')">Upload File</button>
+      </div>
+      <div id="adminTabUrl" class="admin-tab-pane active">
+        <div class="admin-field">
+          <label>Image URL</label>
+          <input type="url" id="adminImgUrl" placeholder="https://example.com/photo.jpg" />
+        </div>
+      </div>
+      <div id="adminTabUpload" class="admin-tab-pane">
+        <div class="admin-field">
+          <label>Image File</label>
+          <input type="file" id="adminImgFile" accept="image/*" />
+        </div>
+      </div>
+      <div class="admin-modal-actions">
+        <button class="admin-modal-cancel" onclick="ADMIN.closeImageModal()">Cancel</button>
+        <button class="admin-modal-apply" onclick="ADMIN.applyImage()">Apply Image</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GitHub PAT Modal -->
+  <div class="admin-overlay" id="adminPatModal">
+    <div class="admin-modal admin-modal-wide">
+      <h3>🔑 Publish to Live Site</h3>
+      <p>Enter your GitHub Personal Access Token to commit changes. It's stored in your browser session only — never saved to the site code.</p>
+      <div class="admin-steps-box">
+        <strong>How to get your token (one-time setup):</strong><br>
+        1. Go to <strong>github.com</strong> and click your profile photo<br>
+        2. <strong>Settings → Developer Settings → Personal access tokens</strong><br>
+        3. <strong>Tokens (classic) → Generate new token</strong><br>
+        4. Give it a name, select the <strong>repo</strong> scope, click Generate<br>
+        5. Copy the token (starts with <code>ghp_</code>) and paste it below
+      </div>
+      <div class="admin-field">
+        <label>Personal Access Token</label>
+        <input type="password" id="adminPatInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+      </div>
+      <div class="admin-modal-actions">
+        <button class="admin-modal-cancel" onclick="ADMIN.closePatModal()">Cancel</button>
+        <button class="admin-modal-apply" onclick="ADMIN.submitPat()">Publish Now 🚀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="adminToast"></div>
+
+  <script>
+  /* =====================================================
+     ADMIN VISUAL EDITOR — Renovations by Matt
+     ===================================================== */
+  const ADMIN = {
+    U_HASH: '2bee5bdde885cb572052677977063f673d80fb850de7c5379c61b8378058088a',
+    P_HASH: 'a62eec3765eafd6705b8e1dc60f41bd608034cee6c3a76e47fb3bf730410683b',
+    GH_OWNER: 'CineMck',
+    GH_REPO: 'renovations-by-matt',
+    GH_FILE: 'index.html',
+
+    isLoggedIn: false,
+    editMode: false,
+    pat: sessionStorage.getItem('rbm_pat') || null,
+    currentImg: null,
+
+    // --- Crypto ---
+    async sha256(str) {
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+    },
+
+    // --- Auth ---
+    async login() {
+      const email = (document.getElementById('adminEmail').value || '').trim();
+      const pw    = (document.getElementById('adminPassword').value || '');
+      const [uH, pH] = await Promise.all([this.sha256(email.toLowerCase()), this.sha256(pw)]);
+      if (uH === this.U_HASH && pH === this.P_HASH) {
+        this.isLoggedIn = true;
+        document.getElementById('adminLoginModal').style.display = 'none';
+        document.getElementById('adminLoginError').style.display = 'none';
+        document.getElementById('adminPassword').value = '';
+        document.body.classList.add('admin-active');
+        this.toast('✅ Logged in! Click "Edit Mode" to start editing.', 'success', 4000);
+      } else {
+        document.getElementById('adminLoginError').style.display = 'block';
+      }
+    },
+
+    logout() {
+      if (this.editMode) this.disableEdit();
+      this.isLoggedIn = false;
+      this.pat = null;
+      sessionStorage.removeItem('rbm_pat');
+      document.body.classList.remove('admin-active');
+      this.toast('Signed out.', 'success', 2000);
+    },
+
+    // --- Edit Mode ---
+    toggleEdit() {
+      this.editMode ? this.disableEdit() : this.enableEdit();
+    },
+
+    enableEdit() {
+      this.editMode = true;
+      document.body.classList.add('admin-edit-mode');
+      const SKIP = '#adminBar,#adminLoginModal,#adminImageModal,#adminPatModal,#adminToast';
+
+      // Make text elements content-editable
+      document.querySelectorAll(
+        'h1,h2,h3,h4,h5,p,li,' +
+        '.stat-number,.stat-label,.badge-text,' +
+        '.service-title,.service-desc,' +
+        '.process-title,.process-desc,' +
+        '.testimonial-text,.testimonial-author,.testimonial-role,' +
+        '.trust-item span,.contact-label,.contact-value'
+      ).forEach(el => {
+        if (!el.closest(SKIP) && !el.querySelector('img,input,button,a')) {
+          el.contentEditable = 'true';
+          el.setAttribute('data-editable', '1');
+        }
+      });
+
+      // Add image overlays
+      document.querySelectorAll('img').forEach(img => {
+        if (!img.closest(SKIP)) this.addImgOverlay(img);
+      });
+
+      const btn = document.getElementById('adminEditBtn');
+      btn.textContent = '✏ Editing ON';
+      btn.classList.add('active');
+      this.toast('✏ Edit mode active — click any text to edit, hover images to replace.', 'success', 5000);
+    },
+
+    disableEdit() {
+      this.editMode = false;
+      document.body.classList.remove('admin-edit-mode');
+
+      document.querySelectorAll('[data-editable]').forEach(el => {
+        el.removeAttribute('contenteditable');
+        el.removeAttribute('data-editable');
+        el.blur();
+      });
+      document.querySelectorAll('.admin-img-overlay').forEach(o => o.remove());
+      document.querySelectorAll('.admin-img-parent').forEach(p => p.classList.remove('admin-img-parent'));
+
+      const btn = document.getElementById('adminEditBtn');
+      btn.textContent = '✏ Edit Mode';
+      btn.classList.remove('active');
+    },
+
+    addImgOverlay(img) {
+      const parent = img.parentElement;
+      if (!parent || parent.querySelector('.admin-img-overlay')) return;
+      parent.classList.add('admin-img-parent');
+      const overlay = document.createElement('div');
+      overlay.className = 'admin-img-overlay';
+      overlay.innerHTML = '<span class="admin-img-overlay-btn">🖼 Replace Image</span>';
+      overlay.addEventListener('click', e => { e.stopPropagation(); this.openImageModal(img); });
+      parent.appendChild(overlay);
+    },
+
+    // --- Image Modal ---
+    openImageModal(img) {
+      this.currentImg = img;
+      document.getElementById('adminImgPreview').src = img.src;
+      document.getElementById('adminImgUrl').value = img.src.startsWith('data:') ? '' : img.src;
+      document.getElementById('adminImgFile').value = '';
+      this.switchTab('url');
+      document.getElementById('adminImageModal').style.display = 'flex';
+    },
+
+    closeImageModal() {
+      document.getElementById('adminImageModal').style.display = 'none';
+      this.currentImg = null;
+    },
+
+    switchTab(tab) {
+      document.getElementById('tabBtnUrl').classList.toggle('active', tab === 'url');
+      document.getElementById('tabBtnUpload').classList.toggle('active', tab === 'upload');
+      document.getElementById('adminTabUrl').classList.toggle('active', tab === 'url');
+      document.getElementById('adminTabUpload').classList.toggle('active', tab === 'upload');
+    },
+
+    applyImage() {
+      const file = document.getElementById('adminImgFile').files[0];
+      const url  = document.getElementById('adminImgUrl').value.trim();
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          if (this.currentImg) this.currentImg.src = e.target.result;
+          this.closeImageModal();
+          this.toast('✅ Image updated!', 'success');
+        };
+        reader.readAsDataURL(file);
+      } else if (url) {
+        if (this.currentImg) this.currentImg.src = url;
+        this.closeImageModal();
+        this.toast('✅ Image updated!', 'success');
+      } else {
+        this.toast('Please enter a URL or choose a file.', 'error');
+      }
+    },
+
+    // --- Publish ---
+    startPublish() {
+      if (this.editMode) this.disableEdit();
+      if (this.pat) {
+        this.doPublish(this.pat);
+      } else {
+        document.getElementById('adminPatInput').value = '';
+        document.getElementById('adminPatModal').style.display = 'flex';
+        setTimeout(() => document.getElementById('adminPatInput').focus(), 100);
+      }
+    },
+
+    closePatModal() {
+      document.getElementById('adminPatModal').style.display = 'none';
+    },
+
+    submitPat() {
+      const pat = (document.getElementById('adminPatInput').value || '').trim();
+      if (!pat) { this.toast('Please enter your GitHub token.', 'error'); return; }
+      this.pat = pat;
+      sessionStorage.setItem('rbm_pat', pat);
+      this.closePatModal();
+      this.doPublish(pat);
+    },
+
+    async doPublish(pat) {
+      this.toast('⏳ Publishing to GitHub...', 'loading', 0);
+      try {
+        const cleanHtml = this.getPublishHtml();
+        const headers = {
+          'Authorization': `Bearer ${pat}`,
+          'Accept': 'application/vnd.github+json',
+          'X-GitHub-Api-Version': '2022-11-28'
+        };
+
+        // Get current file SHA
+        const metaResp = await fetch(
+          `https://api.github.com/repos/${this.GH_OWNER}/${this.GH_REPO}/contents/${this.GH_FILE}`,
+          { headers }
+        );
+        if (metaResp.status === 401) {
+          this.pat = null; sessionStorage.removeItem('rbm_pat');
+          throw new Error('Invalid token. Check your GitHub Personal Access Token and try again.');
+        }
+        if (!metaResp.ok) throw new Error(`GitHub API error ${metaResp.status}`);
+        const meta = await metaResp.json();
+        if (!meta.sha) throw new Error('Could not read the current file SHA from GitHub.');
+
+        // Commit updated HTML
+        const encoded = btoa(unescape(encodeURIComponent(cleanHtml)));
+        const putResp = await fetch(
+          `https://api.github.com/repos/${this.GH_OWNER}/${this.GH_REPO}/contents/${this.GH_FILE}`,
+          {
+            method: 'PUT',
+            headers: { ...headers, 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              message: 'Update website content via admin editor',
+              content: encoded,
+              sha: meta.sha
+            })
+          }
+        );
+        if (!putResp.ok) {
+          const err = await putResp.json();
+          throw new Error(err.message || `Commit failed (HTTP ${putResp.status})`);
+        }
+        this.toast('🚀 Published! Railway is rebuilding your site (~30 sec).', 'success', 7000);
+      } catch(e) {
+        this.toast('❌ ' + e.message, 'error', 7000);
+      }
+    },
+
+    getPublishHtml() {
+      // Clone the full document
+      const clone = document.documentElement.cloneNode(true);
+
+      // Strip edit-mode attributes
+      clone.querySelectorAll('[data-editable]').forEach(el => {
+        el.removeAttribute('data-editable');
+        el.removeAttribute('contenteditable');
+      });
+
+      // Remove image overlays and parent class
+      clone.querySelectorAll('.admin-img-overlay').forEach(o => o.remove());
+      clone.querySelectorAll('.admin-img-parent').forEach(el => el.classList.remove('admin-img-parent'));
+
+      // Reset body classes to clean state
+      const body = clone.querySelector('body');
+      if (body) body.classList.remove('admin-active', 'admin-edit-mode');
+
+      // Reset modal/toolbar display to hidden
+      ['adminBar','adminLoginModal','adminImageModal','adminPatModal','adminToast'].forEach(id => {
+        const el = clone.querySelector('#' + id);
+        if (el) el.style.display = 'none';
+      });
+
+      return '<!DOCTYPE html>\n' + clone.outerHTML;
+    },
+
+    // --- Toast ---
+    toast(msg, type = 'success', duration = 3500) {
+      const t = document.getElementById('adminToast');
+      t.textContent = msg;
+      t.className = type;
+      t.style.display = 'flex';
+      if (this._toastTimer) clearTimeout(this._toastTimer);
+      if (duration > 0) {
+        this._toastTimer = setTimeout(() => { t.style.display = 'none'; }, duration);
+      }
+    }
+  };
+
+  // ---- Event Listeners ----
+
+  // Keyboard shortcut: Alt+Shift+A
+  document.addEventListener('keydown', e => {
+    if (e.altKey && e.shiftKey && e.key === 'A') {
+      if (!ADMIN.isLoggedIn) {
+        document.getElementById('adminLoginModal').style.display = 'flex';
+        setTimeout(() => document.getElementById('adminEmail').focus(), 80);
+      }
+    }
+    if (e.key === 'Escape') {
+      ['adminLoginModal','adminImageModal','adminPatModal'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+    }
+  });
+
+  // Enter key in login password field
+  document.getElementById('adminPassword').addEventListener('keydown', e => {
+    if (e.key === 'Enter') ADMIN.login();
+  });
+  document.getElementById('adminEmail').addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('adminPassword').focus();
+  });
+
+  // Live URL preview in image modal
+  document.getElementById('adminImgUrl').addEventListener('input', e => {
+    if (e.target.value) document.getElementById('adminImgPreview').src = e.target.value;
+  });
+
+  // Live file preview in image modal
+  document.getElementById('adminImgFile').addEventListener('change', e => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = ev => { document.getElementById('adminImgPreview').src = ev.target.result; };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Enter key to submit PAT
+  document.getElementById('adminPatInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') ADMIN.submitPat();
+  });
+
+  // Easter egg: triple-click the footer copyright to open admin login
+  let footerClicks = 0, footerTimer;
+  document.addEventListener('click', e => {
+    if (e.target.closest('footer .footer-bottom')) {
+      footerClicks++;
+      clearTimeout(footerTimer);
+      if (footerClicks >= 3 && !ADMIN.isLoggedIn) {
+        footerClicks = 0;
+        document.getElementById('adminLoginModal').style.display = 'flex';
+        setTimeout(() => document.getElementById('adminEmail').focus(), 80);
+      }
+      footerTimer = setTimeout(() => { footerClicks = 0; }, 700);
+    }
+  });
   </script>
 
 </body>
